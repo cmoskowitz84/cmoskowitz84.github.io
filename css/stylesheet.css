@@ -1,0 +1,32 @@
+/* Style sheet created by: Chris Moskowitz */
+
+
+/* Style displays the mobile class */
+.mobile {
+	display: inline;
+} 
+
+/* Style hides the desktop class */
+.desktop {
+	display: none;
+}
+
+/* Styles for tablet viewport */
+@media only screen and (min-width: 600px) {
+
+/* Style hides the mobile class */
+.mobile {
+	display: none;
+}
+
+/* Style displays the desktop class */
+.desktop {
+	display: inline;
+}
+
+}
+
+/* Styles for desktop viewport */
+@media only screen and (min-width: 950px) {
+
+}
