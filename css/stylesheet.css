@@ -65,6 +65,27 @@ header {
 	width: 30px;
 }
 
+/* collapsible menu */
+.socialLinks a:not(:first-child) {display: none;}
+.socialLinks a.icon {
+    float: right;
+    display: block;
+  }
+  
+.socialLinks.responsive {position: relative;}
+.socialLinks.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.socialLinks.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+}
+
+/* end collapsible menu */
+
 #backtotop {
 	float: left;
 	visibility: hidden;
@@ -138,6 +159,11 @@ main {
 	font: 35px sans-serif;
 }
 
+#socialLinks .icon {
+    display: none;
+}
+
+
 }
 
 /* Styles for desktop viewport */
@@ -159,12 +185,13 @@ main {
 
 /* Style specifies a gradient for the body element */ 
 banner {
-	
+	position: fixed;
 }
 
-#welcome-container {
-	background-color: lightblue;
+#socialLinks .icon {
+    display: none;
 }
+
 
 footer {
 	background-color: black;
