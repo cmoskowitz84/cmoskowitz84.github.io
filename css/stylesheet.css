@@ -12,23 +12,38 @@ img {
 /* Styles for Mobile Layout */
 
 /* Style for the header specifies top margin, background color, rounded corners, and center align content */
+header {
+	font-family: Verdana, Arial, serif;
+	font-size: 2em;
+	margin-top: 0.2em;
+	margin-bottom: 0.3em;
+	text-align: center;
+	padding: 0.2em;
+	color: #00008d; 
+}
 
 #banner {
 	padding-top: 10px;
-	padding-left: 5%;
+	padding-left: 10%;
 	padding-right: 10%;
 	display: inline-block;
-	background: black;
-	width: 85%;
+	background: -moz-linear-gradient(#000000, #FFFFFF); /* Firefox */ 
+	background: -o-linear-gradient(#000000, #FFFFFF); /* Opera */ 
+	background: -webkit-linear-gradient(#000000, #FFFFFF); /* Chrome, Safari */
+	background: linear-gradient(#000000, #FFFFFF); 
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	width: 80%;
 	height: 80px;
+	position: fixed;
 	top: 0px;
 }
 
 #banner p {
-	font: 30px sans-serif;
+	font: 25px sans-serif;
 	color: silver;
 	float: left;
-	padding-left: 10px;
+	padding-left: 25px;
 }
 
 #socialLinks li img {
@@ -38,13 +53,15 @@ img {
 }
 
 #socialLinks {
-	padding-top: 2em;
+	padding-top: 3em;
 	color: white;
 	float: right;
+	position: fixed;
 }
 
 #socialLinks li {
-	display: none;
+	display: inline;
+	visibility: hidden;
 }
 
 #socialLinks li img:hover {
@@ -58,23 +75,12 @@ img {
 	padding-right: 5px;
 }
 
-#main-nav img {
-	width: 25px;
-	height: 25px;
-	padding-left: 5px;
-}
-
-#main-nav {
-	padding-top: 2em;
-	float: left;
-}
-
 /* collapsible menu */
 .socialLinks.responsive {position: relative;}
 .socialLinks.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+	width: 25px;
+	height: 25px;
+	padding-right: 5px;
 }
 
 .socialLinks.responsive a {
@@ -86,6 +92,16 @@ img {
 
 /* end collapsible menu */
 
+#backtotop {
+	float: left;
+	visibility: hidden;
+}
+
+/* Style for h1 */
+h1 {
+	font-size: 1em;
+	
+}
 
 /* Style for the main specifies a block display, text properties, margins, padding, rounded corners, and borders  */
 main {
@@ -95,7 +111,6 @@ main {
 	margin-top: 0.5em;
 	padding: 0.5em;
 	border-radius: 1em;
-	clear:both;
 }
 
 /* Style for the footer specifies font size, text alignment, and top margin */
@@ -127,6 +142,10 @@ main {
 	clear: left;
 }
 
+#backtotop {
+	visibility: visible;
+}
+
 /* Style hides the mobile class */
 .mobile {
 	display: none;
@@ -144,7 +163,6 @@ main {
 
 #banner p {
 	font: 35px sans-serif;
-	padding-left: 25px;
 }
 
 #socialLinks .icon {
@@ -152,7 +170,7 @@ main {
 }
 
 #socialLinks li {
-	display: inline;
+	visibility: visible;
 }
 
 #socialLinks {
@@ -197,9 +215,10 @@ footer {
 }
 }
 
-/* Styles for super small viewport */
-@media only screen and (max-width: 290px) {
-	#banner p {
-		display: none;
-	}
+/* Styles for desktop viewport */
+@media only screen and (min-width: 950px) {
+#banner p {
+	display: none;
+}
+
 }
