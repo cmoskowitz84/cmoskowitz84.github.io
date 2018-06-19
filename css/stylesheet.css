@@ -11,16 +11,6 @@ img {
 
 /* Styles for Mobile Layout */
 
-/* Style for the header specifies top margin, background color, rounded corners, and center align content */
-header {
-	font-family: Verdana, Arial, serif;
-	font-size: 2em;
-	margin-top: 0.2em;
-	margin-bottom: 0.3em;
-	text-align: center;
-	padding: 0.2em;
-	color: #00008d; 
-}
 
 #banner {
 	padding-top: 10px;
@@ -44,6 +34,7 @@ header {
 	color: silver;
 	float: left;
 	padding-left: 25px;
+	margin: 0;
 }
 
 #socialLinks li img {
@@ -53,20 +44,18 @@ header {
 }
 
 #socialLinks {
-	padding-top: 3em;
+	padding-top: 0.5em;
 	color: white;
 	float: right;
-	position: fixed;
 }
 
-#socialLinks li {
-	display: inline;
-	visibility: hidden;
+.socialLinks li {
+	display: none;
 }
 
 #socialLinks li img:hover {
-	height: 30px;
 	width: 30px;
+	height: 30px;
 }
 
 #socialLinks img {
@@ -75,45 +64,57 @@ header {
 	padding-right: 5px;
 }
 
+#mainnav {
+	clear: both;
+}
+
+#mainnav li{
+	float: left;
+}
+
+#mainnav li a{
+	display: block;
+	color: white;
+	padding: 5px;
+}
+
+#mainnav li a:hover{
+	font-weight: bold;
+}
+
 /* collapsible menu */
 .socialLinks.responsive {position: relative;}
 .socialLinks.responsive a.icon {
 	width: 25px;
 	height: 25px;
 	padding-right: 5px;
+	padding-bottom: 5px;
 }
 
 .socialLinks.responsive a {
     float: none;
     display: block;
-    text-align: left;
 	visibility: visible;
+}
+
+.socialLinks.responsive li {
+	display: inline;
 }
 
 /* end collapsible menu */
 
-#backtotop {
-	float: left;
-	visibility: hidden;
-}
 
-/* Style for h1 */
-h1 {
-	font-size: 1em;
-	
-}
-
-/* Style for the main specifies a block display, text properties, margins, padding, rounded corners, and borders  */
+/* Style for the main  */
 main {
 	background-color: white;
 	font-family: Georgia, "Times New Roman", sans-serif;
 	font-size: 1em;
-	margin-top: 0.5em;
+	margin-top: 4em;
 	padding: 0.5em;
 	border-radius: 1em;
 }
 
-/* Style for the footer specifies font size, text alignment, and top margin */
+/* Style for the footer */
 footer {
 	background-color: white;
 	color: black;
@@ -137,13 +138,9 @@ footer {
 @media only screen and (min-width: 600px) {
 
 
-/* Style specifies clear and margin for the main element */
+/* Style for the main element */
 main {
 	clear: left;
-}
-
-#backtotop {
-	visibility: visible;
 }
 
 /* Style hides the mobile class */
@@ -156,11 +153,6 @@ main {
 	display: inline;
 }
 
-#welcome-container {
-	display: inline-block;
-	background-color: blue;
-}
-
 #banner p {
 	font: 35px sans-serif;
 }
@@ -169,12 +161,11 @@ main {
     display: none;
 }
 
-#socialLinks li {
-	visibility: visible;
+.socialLinks li {
+	display: inline;
 }
 
 #socialLinks {
-	padding-top: 3em;
 	color: white;
 	float: right;
 }
@@ -185,38 +176,14 @@ main {
 /* Styles for desktop viewport */
 @media only screen and (min-width: 950px) {
 
-/* Style specifies width for container */ 
-#container {
-	width: 80%;
-}
-
-/* Style for main specifies border, border radius, box-shadow, and margin */
-main {
-		border: none;
-		border-radius: 1em;
-		box-shadow: 1em 1em 1em #331400;
-		margin-top: 1em;
-		overflow: auto;
-}
-
-/* Style specifies a gradient for the body element */ 
-banner {
-	position: fixed;
-}
-
-#socialLinks .icon {
-    display: none;
-}
-
-
 footer {
 	background-color: black;
 	color: white;
 }
 }
 
-/* Styles for desktop viewport */
-@media only screen and (min-width: 950px) {
+/* Styles for super small viewport */
+@media only screen and (max-width: 250px) {
 #banner p {
 	display: none;
 }
