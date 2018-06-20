@@ -1,7 +1,7 @@
 /* Style sheet created by: Chris Moskowitz */
 
 body {
-	background: #000000;
+	background: #FFFFFF;
 }
 
 img { 
@@ -24,7 +24,7 @@ img {
 	background-repeat: no-repeat;
     background-attachment: fixed;
 	width: 80%;
-	height: 80px;
+	height: 85px;
 	position: fixed;
 	top: 0px;
 }
@@ -33,7 +33,7 @@ img {
 	font: 25px sans-serif;
 	color: silver;
 	float: left;
-	padding-left: 25px;
+	padding-left: 5px;
 	margin: 0;
 }
 
@@ -44,7 +44,6 @@ img {
 }
 
 #socialLinks {
-	-webkit-margin: 0;
 	color: white;
 	float: right;
 }
@@ -75,12 +74,14 @@ img {
 #mainnav li a{
 	display: block;
 	color: white;
-	padding: 5px;
+	padding: 10px;
+	text-decoration: none;
 }
 
 #mainnav li a:hover{
 	font-weight: bold;
 }
+
 
 /* collapsible menu */
 .socialLinks.responsive {position: relative;}
@@ -106,7 +107,6 @@ img {
 
 /* Style for the main  */
 main {
-	background-color: white;
 	font-family: Georgia, "Times New Roman", sans-serif;
 	font-size: 1em;
 	margin-top: 5em;
@@ -124,46 +124,35 @@ footer {
 	font-weight: bold;
 }
 
-.homecontainer {
-	text-align: center;
-	color: black;
-}
-
 .hometext {
-	position: absolute;
-	top: 50%;
-	bottom: 50%;
-	transform: translate:(-50%, -50%);
+	position: relative;
+	z-index: -1;
 }
 
-/* Style displays the mobile class */
-.mobile {
-	display: inline;
-} 
+#reviews {
+	position: absolute;
+	text-align: center;
+	top: 35%;
+	left: 5%;
+	width: 80%;
+	background: rgb(0, 0, 0); /* fallback color */
+	background: rgba(0, 0, 0, 0.7);
+}
 
-/* Style hides the desktop class */
-.desktop {
-	display: none;
+#reviewSpan {
+	color: white; 
+	font: 14px/34px Helvetica, Sans-Serif;   
+	padding: 5px;
+}
+
+#reviewerSpan {
+	color: white; 
+	font: bold 14px/34px Helvetica, Sans-Serif; 
+	padding: 5px;
 }
 
 /* Styles for tablet viewport */
 @media only screen and (min-width: 600px) {
-
-
-/* Style for the main element */
-.hometext{
-	font-size: 300%;
-}
-
-/* Style hides the mobile class */
-.mobile {
-	display: none;
-}
-
-/* Style displays the desktop class */
-.desktop {
-	display: inline;
-}
 
 #banner p {
 	font: 35px sans-serif;
@@ -182,15 +171,20 @@ footer {
 	float: right;
 }
 
+#reviewSpan {
+	font: 24px/45px Helvetica, Sans-Serif;   
+	padding: 10px;
+}
+
+#reviewerSpan {
+	font: bold 24px/45px Helvetica, Sans-Serif;  
+	padding: 10px;
+}
 
 }
 
 /* Styles for desktop viewport */
 @media only screen and (min-width: 950px) {
-
-.hometext{
-	font-size: 300%;
-}
 
 footer {
 	background-color: black;
@@ -199,9 +193,29 @@ footer {
 }
 
 /* Styles for super small viewport */
-@media only screen and (max-width: 250px) {
+@media only screen and (max-width: 275px) {
 #banner p {
 	display: none;
+}
+
+#socialLinks li img {
+	width: 20px;
+	height: 20px;
+}
+
+#socialLinks li img:hover {
+	width: 25px;
+	height: 25px;
+}
+
+#socialLinks img {
+	width: 20px;
+	height: 20px;
+}
+
+.socialLinks.responsive a.icon {
+	width: 20px;
+	height: 20px;
 }
 
 }
