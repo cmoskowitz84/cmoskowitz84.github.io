@@ -80,6 +80,7 @@ img {
 
 #mainnav li a:hover{
 	font-weight: bold;
+	cursor: pointer;
 }
 
 
@@ -207,6 +208,19 @@ footer {
 .form-button {
 	color: black;
 	width: 100%;
+}
+
+.success_message {
+	display: none;
+}
+
+.success_message.responsive {
+	display: block;
+	text-align: center;
+}
+
+.contact-form.responsive {
+	display: none;
 }
 
 /* Styles for tablet viewport */

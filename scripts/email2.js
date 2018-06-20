@@ -3,5 +3,9 @@ window.onload = function() {
                 event.preventDefault();
                 this.contact_number.value = Math.random() * 100000 | 0;
                 emailjs.sendForm('gmail', 'template_7cLd0D2C', this);
+				var elementyetagain = document.getElementById("success_message");
+				if (elementyetagain.className === "success_message") {
+				elementyetagain.className += " responsive";
+				}
             });
         }
