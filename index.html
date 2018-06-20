@@ -9,6 +9,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1"> 
 	<script src="scripts/menu.js"></script>
+	<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+	<script src="scripts/email.js"></script>
+	<script src="scripts/email2.js"></script>
 </head>
 
 <body>
@@ -18,9 +21,8 @@
 		<p>Tony J Harris</p>
 		<div class="mainnav" id="mainnav">
 		<ul>
-			<li><a href="#home">Home</a></li>
 			<li><a href="#gallery">Gallery</a></li>
-			<li><a href="javascript:void(0);" class="icon" onclick="openContact()">Contact</a></li>
+			<li><a id="openForm">Contact</a></li>
 		</ul>
 		</div>  <!-- end of main-nav div -->
 		</div> <!-- end of banner top div -->
@@ -50,9 +52,37 @@
 		<script src="scripts/changereviewer.js"></script>
 		</div>
 		</section><!-- end home section -->
-		<section id="gallery">
-		</section>
 	</main>
+	
+	<!-- Contact Form -->
+		<div id="contactForm" class="contactForm">
+		<div class="form-content">
+		<span class="close">&times;</span>
+		<form id="contact-form">
+        <label class="form-spacer labels">Name</label>
+        <input class="form-spacer" type="text" name="user_name"><br/>
+        <label class="form-spacer labels">Email</label>
+        <input class="form-spacer" type="email" name="user_email"><br/>
+		<label class="form-spacer labels">Number</label>
+        <input class="form-text" type="tel" name="contact_number"><br/>
+        <label class="form-spacer labels">Message</label>
+        <textarea class="form-text" name="contact"></textarea><br/><br/><br/><br/>
+        <input class="form-button"  type="submit" value="Send">
+    </form>
+		</div>
+		</div>
+	<!-- End of Contact Form-->
+	<script src="scripts/contactform.js"></script>
+	
+		<!-- gallery will go here
+		<div id="contactForm" class="modal">
+		<div class="modal-content">
+		<span class="close">&times;</span>
+		
+		</div>
+		</div>
+	 End of Gallery section-->
+	<script src="scripts/gallerybox.js"></script>
 	
 		<!-- Use the footer area to add webpage footer content -->
 	<footer>
