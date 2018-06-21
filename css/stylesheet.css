@@ -198,8 +198,9 @@ footer {
 
 .galclose {
 	color: black;
-	padding-top: 0;
-	padding-right: 5px;
+	position: fixed;
+	top: 0;
+	right: 20px;
 }
 
 .galclose:hover,
@@ -247,10 +248,6 @@ footer {
     background-color: rgba(255,255,255,0.6); 
 }
 
-.gallery {
-	text-align: center;
-}
-
 .gallery:after {
 	content: "";
 	display: table;
@@ -260,7 +257,6 @@ footer {
 .galimage {
 	float: left;
 	width: 30%;
-	border: 1px solid white;
 	padding-top: 5px;
 	padding-left: 5px;
 }
@@ -270,7 +266,97 @@ footer {
 }
 
 .gallerytotal {
-	background-color: black;
+	width: 98%;
+}
+
+.gallery {
+	text-align: center;
+}
+
+#row1,
+#row2,
+#row3,
+#row4,
+#row5,
+#row6,
+#row7,
+#row8 {
+	margin-left: 20px;
+	padding-bottom: 10px;
+}
+
+#row1 {
+	padding-top: 10px;
+}
+
+/* light box */
+.galSlides {
+  display: none;
+  position: fixed;
+  z-index: 20;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.galSlides-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.slideclose {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.slideclose:hover,
+.slideclose:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.imgSlides {
+  display: none;
+  text-align: center;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Styles for tablet viewport */

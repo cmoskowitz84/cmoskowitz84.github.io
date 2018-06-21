@@ -18,9 +18,9 @@ function change() {
 
 //Reviewer Script//
 var reviewer = ["Arts-Louisville", 
-"Reveiwer 3", 
-"Reveiwer 4", 
-"Reveiwer 1"];
+"Reviewer 3", 
+"Reviewer 4", 
+"Reviewer 1"];
 var counter = 0;
 var element = document.getElementById("reviewerSpan");
 var inst = setInterval(changereviewer, 15000);
@@ -47,11 +47,11 @@ formspan.onclick = function hideForm() {
     formmodal.style.display = "none";
 }
 
-window.onclick = function hideForm2(event) {
+window.addEventListener('click', function hideForm(event) {
     if (event.target == formmodal) {
         formmodal.style.display = "none";
     }
-}
+});
 
 
 //Email Script//
@@ -89,12 +89,45 @@ galbtn.onclick = function showGallery() {
     galmodal.style.display = "block";
 }
 
-galspan.onclick = function hideGal() {
+galspan.onclick = function hideGallery() {
     galmodal.style.display = "none";
 }
 
-window.onclick = function hideGal2(event) {
+window.addEventListener('click', function hideGallery(event) {
     if (event.target == galmodal) {
         galmodal.style.display = "none";
     }
+});
+
+
+//Slideshow Script//
+function openSlides() {
+  document.getElementById('galSlides').style.display = "block";
 }
+
+function closeSlides() {
+  document.getElementById('galSlides').style.display = "none";
+}
+
+var slideIndex = 1;
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("imgSlides");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slideIndex-1].style.display = "block";
+}
+
+showSlides(slideIndex);
