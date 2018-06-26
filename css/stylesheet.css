@@ -281,6 +281,8 @@ footer {
 	text-align: center;
 }
 
+/* padding for gallery rows containing pictures*/
+
 #row1,
 #row2,
 #row3,
@@ -364,6 +366,32 @@ footer {
 .prev:hover,
 .next:hover {
   background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Styles for review and bio text areas */
+
+#about h2 {
+	font-family: "Arial Black", Gadget, sans-serif;
+	text-align: center;
+	-webkit-margin-before: .2em;
+}
+
+#about p {
+	padding-top: 5px;
+	font-family: Tahoma, Geneva, sans-serif;
+	padding-left: 10px;
+}
+
+#bio,
+#fullreviews {
+	background-color: lightgray;
+	margin-top: 5px;
+	border-radius: 5px 5px 5px 5px;
+	border: 1px solid;
+}
+
+#homereviewer {
+	font-weight: bold;
 }
 
 /* Styles for tablet viewport */
