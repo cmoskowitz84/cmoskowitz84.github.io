@@ -43,6 +43,8 @@ img {
 	padding-right: 5px;
 }
 
+/* Social links styles */
+
 #socialLinks {
 	color: white;
 	float: right;
@@ -62,6 +64,8 @@ img {
 	height: 40px;
 	padding-right: 5px;
 }
+
+/* main nav menu styles */
 
 #mainnav {
 	clear: both;
@@ -152,6 +156,8 @@ footer {
 	padding: 5px;
 }
 
+/* Style for contact form */
+
 .contactForm {
     display: none; 
     position: fixed; 
@@ -235,6 +241,8 @@ footer {
 	display: none;
 }
 
+/* Style for gallery */
+
 .galleryBox {
     display: none; 
     position: fixed; 
@@ -288,7 +296,7 @@ footer {
 	padding-top: 10px;
 }
 
-/* light box */
+/* slide show */
 .galSlides {
   display: none;
   position: fixed;
